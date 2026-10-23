@@ -1,0 +1,47 @@
+{
+    "name": "Umar Embedded Systems Sandbox",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.fontSize": 16,
+                "terminal.integrated.fontSize": 16,
+                "workbench.iconTheme": "vs-seti",
+                "editor.minimap.enabled": false,
+                "workbench.colorTheme": "MacOS Modern Dark - Ventura Xcode Default",
+                "workbench.preferredDarkColorTheme": "MacOS Modern Dark - Ventura Xcode Default",
+                "editor.wordWrapColumn": 120,
+                "editor.wordWrap": "off",
+                "workbench.startupEditor": "none",
+                "editor.useTabStops": false,
+                "files.trimTrailingWhitespace": true,
+                "git.autorefresh": false,
+                "terminal.integrated.cursorBlinking": true,
+                "terminal.integrated.cursorStyle": "line",
+                "debug.console.fontSize": 16,
+                "editor.rulers": [
+                    120
+                ],
+                "terminal.integrated.sendKeybindingsToShell": true,
+                "extensions.ignoreRecommendations": true,
+                "remote.autoForwardPorts": false
+            },
+            "extensions": [
+                "ZixuanWang.linkerscript",
+                "ms-vscode.cpptools",
+                "davidbwaters.macos-modern-theme",
+                "maziac.hex-hover-converter",
+                "ms-vscode.hexeditor",
+                "trond-snekvik.gnu-mapfiles",
+                "joshuabernstein.armextensionhelpers",
+                "ms-vscode.cmake-tools",
+                "marus25.cortex-debug",
+                "ms-python.python"
+            ]
+        }
+    },
+    "postCreateCommand": "python3 -m pip install --user pygments && wget -q -O ~/.gdbinit https://git.io/.gdbinit"
+}
